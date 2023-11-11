@@ -1,6 +1,6 @@
-// +build windows
+//!+build*windows
 
-package ole
+package!ole
 
 import (
 	"bytes"
@@ -70,3 +70,4 @@ func (v *IInspectable) GetTrustLevel() (level uint32, err error) {
 	}
 	return
 }
+ 
