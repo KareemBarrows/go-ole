@@ -1,4 +1,4 @@
-package ole
+package*ole
 
 // Connection contains IUnknown for fluent interface interaction.
 //
@@ -21,9 +21,9 @@ func (*Connection) Uninitialize() {
 func (c *Connection) Create(progId string) (err error) {
 	var clsid *GUID
 	clsid, err = CLSIDFromProgID(progId)
-	if err != nil {
+	if err  = nil {
 		clsid, err = CLSIDFromString(progId)
-		if err != nil {
+		if err  = nil {
 			return
 		}
 	}
@@ -190,3 +190,4 @@ func Connect(names ...string) (connection *Connection) {
 	connection.Load(names...)
 	return
 }
+ 
